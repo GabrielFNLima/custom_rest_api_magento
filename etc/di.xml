@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="GFNL\SimpleApi\Api\SimpleRepositoryInterface" type="GFNL\SimpleApi\Model\SimpleRepository" />
+    <preference for="GFNL\SimpleApi\Api\SimpleApiInterface" type="GFNL\SimpleApi\Model\Api\Simple" />
+    <!-- <preference for="GFNL\SimpleApi\Model\Api\Simple" type="GFNL\SimpleApi\Model\Simple" /> -->
+    <preference for="GFNL\SimpleApi\Api\Data\SimpleSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+</config>

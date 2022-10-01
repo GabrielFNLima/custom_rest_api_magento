@@ -1,0 +1,28 @@
+<h1>asds</h1>
+<button id="ajax">click</button>
+<script>
+    require(['jquery', 'jquery/ui'], function($){
+        $(document).ready( function() {
+            $('#ajax').click(function(){
+                $.ajax('https://magento2.devgfnl.com/rest/V1/gfnl/simpleapi/test/1/2', {
+                method: "POST",
+                contentType: 'application/json',
+                data: JSON.stringify(
+                    {
+                        "argument": {
+                        "first_name":"test_first",
+                        "last_name":"test_last"
+                    }
+                }
+
+                ),
+                success: (function(data) {
+                    console.log('sc')
+                }
+                ).bind(this)
+            });
+            })
+
+        });
+    });
+</script>

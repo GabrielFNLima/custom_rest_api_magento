@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/gfnl/simpleapi/test/:argument" method="GET">
+        <service class="GFNL\SimpleApi\Api\SimpleRepositoryInterface" method="getTest"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/gfnl/simpleapi/test/me" method="GET">
+        <service class="GFNL\SimpleApi\Api\SimpleRepositoryInterface" method="getCustomer"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+         <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+        <route url="/V1/gfnl/simpleapi/test/me" method="POST">
+        <service class="GFNL\SimpleApi\Api\SimpleApiInterface" method="methodName"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+         <!-- <data>
+            <parameter name="customer_id" force="true">%customer_id%</parameter>
+        </data> -->
+    </route>
+    <route url="/V1/gfnl/simpleapi/test/:id/:argument" method="POST">
+        <service class="GFNL\SimpleApi\Api\SimpleRepositoryInterface" method="getTest"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes>
