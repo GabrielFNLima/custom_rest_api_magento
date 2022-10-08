@@ -13,5 +13,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->_jsonSerializer->serialize($array);
     }
+    public function decodeArray($array)
+    {
+        return $this->_jsonSerializer->unserialize($array);
+    }
 }
 

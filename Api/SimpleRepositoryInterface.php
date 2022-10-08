@@ -46,8 +46,9 @@ interface SimpleRepositoryInterface
      */
     public function getCustomer($customerId);
         /**
-     * @param mixed $customerId
+     * @param mixed $customer_id
+     * @param mixed $id
      * @return void
      */
-    public function saveDB($customerId);
+    public function saveDB($customer_id,$id);
 }

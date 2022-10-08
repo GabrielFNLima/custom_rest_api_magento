@@ -200,14 +200,15 @@ class SimpleRepository implements SimpleRepositoryInterface
         // return $this->helper->encodeArray($collection->getData());
     }
 
-    public function saveDB($customerId)
+    public function saveDB($customer_id,$id)
     {
-                $body=json_decode($this->request->getContent(), false);
+                // $body=json_decode($this->request->getContent(), false);
 
-                $obj = $this->simpleFactory->create()->addData([
-                'customer_id'=>$customerId,
-                'descripion'=>$body->descripion
-                ]);
-        return $this->save($obj)->getCustomerId();
+                // $obj = $this->simpleFactory->create()->addData([
+                // 'customer_id'=>$customerId,
+                // 'descripion'=>$body->descripion
+                // ]);
+                return $customer_id .'-'.$id;
+        // return $this->save($obj)->getCustomerId();
     }
 }
